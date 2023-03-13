@@ -14,7 +14,7 @@ namespace VendingMachine
         public Function()
         {
             this.Products = prod.GetProducts(); //Would have a database normally and would sync in stocklevel through a hangfire job as an example
-        }
+        } 
 
         public void DisplayProducts()
         {
