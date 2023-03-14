@@ -25,7 +25,7 @@ namespace VendingMachine
             var T = false;
             while (T == false)
             {
-                Console.WriteLine("Please select a product");
+                Console.WriteLine("Please select a product by ID (0,1,2)");
                 func.DisplayProducts();
                 Console.WriteLine();
                 while (T == false)
