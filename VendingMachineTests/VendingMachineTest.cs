@@ -27,31 +27,16 @@ namespace VendingMachineTests
         }
 
         [DataTestMethod]
-        [DataRow("50", 50)]
-        [DataRow("40", 20)]
-        [DataRow("30", 30)]
-        [DataRow("20", 20)]
-        public void AddingMoney(string input, int expected)
-        {
-            Vend fn = new Vend();
-            var productPrice = 0.5M;
-            fn.Money.AddMoney(input, productPrice);
-            decimal result = fn.Money.MoneyInMachine;
-            Assert.AreEqual((decimal)expected, result);
-        }
-
-        [DataTestMethod]
-        [DataRow("button", false)]
-        [DataRow("20", true)]
-        [DataRow("50", true)]
-        [DataRow("plastic", false)]
-        [DataRow("0", true)]
-        public void ValidatingMoney(string input, bool expected)
+        [DataRow("50p", true)]
+        [DataRow("Button", false)]
+        [DataRow("£1", true)]
+        [DataRow("Box", false)]
+        public void AddingMoney(string input, bool expected)
         {
             Money fn = new Money();
             var productPrice = 0.5M;
-            bool result = fn.AddMoney(input, productPrice);
-            Assert.AreEqual(expected, result);
-        }
+            bool t = fn.AddMoney(input, productPrice, false);           
+            Assert.AreEqual(expected, t);
+        } 
     }
 }
