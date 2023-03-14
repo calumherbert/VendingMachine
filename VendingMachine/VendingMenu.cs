@@ -19,9 +19,9 @@ namespace VendingMachine
             var productInput = "";
             var exactChangeRequired = false;
             var coinMessage = "INSERT COINS";
-            if (exactChangeRequired) { coinMessage = "EXACT CHNAGE ONLY"; }
-            //would have some sort of database call controlled by maybe an admin screen to determine whether machine requires exact change.
-            //Set to true if you want exact change to be used!
+            if (exactChangeRequired) { coinMessage = "EXACT CHANGE ONLY"; }
+            //would have a database call that checks the change levels within the machine to determine whether exact change is required. Update Method for topping change levels up as and when.
+            //Can set to true if you want exact change to be used!
             var T = false;
             while (T == false)
             {
