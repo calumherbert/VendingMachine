@@ -10,8 +10,13 @@ namespace VendingMachine
     {
         public static void Main()
         {
-            VendingMenu vendingMenu = new VendingMenu();
-            vendingMenu.MenuHeader();
+            bool t = false;
+            while (t == false)
+            {
+                VendingMenu vendingMenu = new VendingMenu();
+                t = vendingMenu.MenuHeader();
+            }
+
         }
     }
 }
